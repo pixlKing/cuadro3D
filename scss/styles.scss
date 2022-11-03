@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url('../img/pared.jpg') center center no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    .wrapper{
+        perspective: 2000px;
+        z-index: 1;
+        
+        .marco{
+            border: 20px solid gray;
+            border-image: url(../img/marco.png) 47;
+            box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 50%);
+            overflow: hidden;
+            width: 300px;
+            height: 400px;
+            
+            .canvas{
+                transform: translate(-50%, -7%)!important;
+            }
+        }
+    }
+}
+
